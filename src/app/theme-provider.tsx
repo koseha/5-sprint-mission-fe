@@ -1,0 +1,18 @@
+// app/theme-provider.tsx
+"use client";
+
+import { ThemeProvider, CssBaseline } from "@mui/material";
+import theme from "@/styles/theme";
+
+export default function MuiThemeProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      {children}
+    </ThemeProvider>
+  );
+}
