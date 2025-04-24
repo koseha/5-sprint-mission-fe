@@ -11,7 +11,9 @@ import { RHFMultilineInput } from "@/components/form/RHFMultilineInput";
 import { SearchInput } from "@/components/form/SearchInput";
 
 const schema = z.object({
-  name: z.string().min(1, "이름은 필수입니다."),
+  name: z
+    .string({ required_error: "이름은 필수입니다." })
+    .min(1, "이름은 1자 이상 입력해주세요."),
   email: z.string().email("유효한 이메일 형식이 아닙니다."),
   password: z
     .string()
@@ -41,10 +43,18 @@ export default function Page() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <RHFTextInput name="name" control={control} />
+      <RHFTextInput
+        name="name"
+        placeholder="닉네임을 입력해주세요"
+        control={control}
+      />
+      <hr />
       <RHFTextInput name="email" control={control} />
+      <hr />
       <RHFPasswordInput name="password" control={control} />
+      <hr />
       <RHFMultilineInput name="content" minRows={6} control={control} />
+      <hr />
       <SearchInput />
       <button type="submit">제출</button>
     </form>

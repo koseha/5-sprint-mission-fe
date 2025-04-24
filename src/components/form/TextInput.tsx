@@ -1,7 +1,7 @@
 // components/form/Input.tsx
 
 import { FormControl, FormHelperText } from "@mui/material";
-import { NoOutlineInput } from "./NoOutlineInput";
+import { BaseInput } from "./BaseInput";
 
 type TextInputProps = {
   label?: string;
@@ -26,7 +26,7 @@ export const TextInput = ({
 }: TextInputProps) => (
   <div>
     <FormControl fullWidth sx={{ minHeight: "82px" }}>
-      <NoOutlineInput
+      <BaseInput
         value={value}
         placeholder={placeholder}
         multiline={multiline}

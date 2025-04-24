@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import React from "react";
-import { NoOutlineInput } from "./NoOutlineInput";
+import { BaseInput } from "./BaseInput";
 
 type PasswordInputProps = {
   label?: string;
@@ -35,7 +35,7 @@ export const PasswordInput = ({
   return (
     <div>
       <FormControl fullWidth sx={{ minHeight: "82px" }} variant="outlined">
-        <NoOutlineInput
+        <BaseInput
           id="outlined-adornment-password"
           type={showPassword ? "text" : "password"}
           value={value}

@@ -5,7 +5,7 @@
 import { FormControl, FormHelperText, InputAdornment } from "@mui/material";
 import { Search } from "@mui/icons-material";
 import React from "react";
-import { NoOutlineInput } from "./NoOutlineInput";
+import { BaseInput } from "./BaseInput";
 
 type SearchInputProps = {
   label?: string;
@@ -27,7 +27,7 @@ export const SearchInput = ({
   return (
     <div>
       <FormControl fullWidth sx={{ minHeight: "82px" }} variant="outlined">
-        <NoOutlineInput
+        <BaseInput
           id="outlined-adornment-password"
           value={value}
           placeholder={placeholder}

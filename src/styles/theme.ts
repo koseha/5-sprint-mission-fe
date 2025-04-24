@@ -1,14 +1,32 @@
 // src/styles/theme.ts
 import { createTheme } from "@mui/material/styles";
 
-// declare module "@mui/material/styles" {
-//   interface Palette {
-//     panda: Palette["primary"];
-//   }
-//   interface PaletteOptions {
-//     panda?: PaletteOptions["primary"];
-//   }
-// }
+declare module "@mui/material/styles" {
+  interface Palette {
+    button: {
+      default: string;
+      hover: string;
+      active: string;
+      disabled: string;
+    };
+    heart: {
+      true: string;
+      false: string;
+    };
+  }
+  interface PaletteOptions {
+    button?: {
+      default: string;
+      hover: string;
+      active: string;
+      disabled: string;
+    };
+    heart: {
+      true: string;
+      false: string;
+    };
+  }
+}
 
 const theme = createTheme({
   typography: {
@@ -35,6 +53,16 @@ const theme = createTheme({
     error: {
       main: "#F74747",
     },
+    button: {
+      default: "#3692FF",
+      hover: "#1967D6",
+      active: "#1251AA",
+      disabled: "#9ca3af",
+    },
+    heart: {
+      true: "#FF68CC",
+      false: "#6B7280",
+    },
   },
   components: {
     MuiCssBaseline: {
@@ -49,6 +77,13 @@ const theme = createTheme({
         a: {
           textDecoration: "none",
           color: "inherit",
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          lineHeight: 0,
         },
       },
     },

@@ -2,16 +2,12 @@
 
 import { OutlinedInput, OutlinedInputProps } from "@mui/material";
 
-type NoOutlineInputProps = {
+type BaseInputProps = {
   minHeight?: string;
   label?: string;
 } & OutlinedInputProps;
 
-export const NoOutlineInput = ({
-  label,
-  minHeight,
-  ...props
-}: NoOutlineInputProps) => (
+export const BaseInput = ({ label, minHeight, ...props }: BaseInputProps) => (
   <OutlinedInput
     {...props}
     sx={(theme) => ({
