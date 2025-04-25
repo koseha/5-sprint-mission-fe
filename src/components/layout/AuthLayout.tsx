@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { ReactNode } from "react";
 import { ImageCircleButton } from "../button/ImageCircleButton";
+import { LinkButton } from "../button/LinkButton";
 
 type AuthLayoutProps = {
   children: ReactNode;
@@ -12,13 +13,15 @@ export const AuthLayout = ({ children, footerSlot }: AuthLayoutProps) => {
   return (
     <Box sx={authContainerStyle}>
       <Box sx={logoContainerStyle}>
-        <Image
-          src={"/assets/images/logo.png"}
-          width={392}
-          height={132}
-          layout="responsive"
-          alt="logo"
-        />
+        <LinkButton href="/">
+          <Image
+            src={"/assets/images/logo.png"}
+            width={392}
+            height={132}
+            layout="responsive"
+            alt="logo"
+          />
+        </LinkButton>
       </Box>
       {children}
       <Box sx={oauthContainerStyle}>
