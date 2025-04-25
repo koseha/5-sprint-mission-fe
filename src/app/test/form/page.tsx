@@ -5,11 +5,11 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { RHFTextInput } from "@/components/form/RHFTextInput";
-import { RHFPasswordInput } from "@/components/form/RHFPasswordInput";
-import { RHFMultilineInput } from "@/components/form/RHFMultilineInput";
-import { SearchInput } from "@/components/form/SearchInput";
 import { Typography } from "@mui/material";
+import { RHFTextInput } from "@/components/input/RHFTextInput";
+import { RHFPasswordInput } from "@/components/input/RHFPasswordInput";
+import { RHFMultilineInput } from "@/components/input/RHFMultilineInput";
+import { SearchInput } from "@/components/input/SearchInput";
 
 const schema = z.object({
   name: z

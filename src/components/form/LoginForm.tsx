@@ -4,9 +4,9 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Box, styled, Typography } from "@mui/material";
-import { RHFTextInput } from "./RHFTextInput";
-import { RHFPasswordInput } from "./RHFPasswordInput";
 import { MainButton } from "../button/MainButton";
+import { RHFTextInput } from "../input/RHFTextInput";
+import { RHFPasswordInput } from "../input/RHFPasswordInput";
 
 // schema, FormData는 이곳에서만 쓰이고 확장 가능성이 낮아서 이곳에 같이 둠
 const schema = z.object({
