@@ -1,10 +1,11 @@
 // components/form/Input.tsx
 
-import { FormControl, FormHelperText } from "@mui/material";
+import { FormControl, FormHelperText, Typography } from "@mui/material";
 import { BaseInput } from "./BaseInput";
+import { ReactNode } from "react";
 
 type TextInputProps = {
-  label?: string;
+  label?: ReactNode;
   value: string;
   placeholder?: string;
   multiline?: boolean;
@@ -25,6 +26,7 @@ export const TextInput = ({
   error,
 }: TextInputProps) => (
   <div>
+    {label && label}
     <FormControl fullWidth sx={{ minHeight: "82px" }}>
       <BaseInput
         value={value}

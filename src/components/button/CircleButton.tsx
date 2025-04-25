@@ -14,7 +14,7 @@ const getSize = (size: CircleButtonProps["size"]) => {
       return "56px";
     case "medium":
     default:
-      return "40px";
+      return "42px";
   }
 };
 

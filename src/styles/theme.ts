@@ -1,36 +1,33 @@
 // src/styles/theme.ts
 import { createTheme } from "@mui/material/styles";
 
-declare module "@mui/material/styles" {
-  interface Palette {
-    button: {
-      default: string;
-      hover: string;
-      active: string;
-      disabled: string;
-    };
-    heart: {
-      true: string;
-      false: string;
-    };
-  }
-  interface PaletteOptions {
-    button?: {
-      default: string;
-      hover: string;
-      active: string;
-      disabled: string;
-    };
-    heart: {
-      true: string;
-      false: string;
-    };
-  }
-}
-
 const theme = createTheme({
   typography: {
     fontFamily: "Pretendard",
+    text3xl: {
+      fontSize: "32px",
+    },
+    text2xl: {
+      fontSize: "24px",
+    },
+    textXl: {
+      fontSize: "20px",
+    },
+    text2lg: {
+      fontSize: "18px",
+    },
+    textLg: {
+      fontSize: "16px",
+    },
+    textMd: {
+      fontSize: "14px",
+    },
+    textSm: {
+      fontSize: "13px",
+    },
+    textXs: {
+      fontSize: "12px",
+    },
   },
   palette: {
     primary: {
@@ -86,6 +83,15 @@ const theme = createTheme({
           lineHeight: 0,
         },
       },
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
     },
   },
 });

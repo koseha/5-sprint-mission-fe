@@ -1,7 +1,7 @@
 // app/theme-provider.tsx
 "use client";
 
-import { ThemeProvider, CssBaseline } from "@mui/material";
+import { ThemeProvider, CssBaseline, Container } from "@mui/material";
 import theme from "@/styles/theme";
 
 export default function MuiThemeProvider({
@@ -12,7 +12,16 @@ export default function MuiThemeProvider({
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {children}
+      <Container
+        maxWidth="xl"
+        sx={{
+          margin: "0 auto",
+          padding: { lg: "52px", sm: "52px", xs: "16px" },
+          minHeight: "100vh",
+        }}
+      >
+        {children}
+      </Container>
     </ThemeProvider>
   );
 }

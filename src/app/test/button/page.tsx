@@ -17,40 +17,40 @@ export default function Page() {
     <>
       <BaseButton>버튼</BaseButton>
       <hr />
-      <MainButton variant="primary" type="confirm" size="lg">
+      <MainButton variant="primary" choice="confirm" size="lg">
         메인 버튼
       </MainButton>
       <hr />
-      <MainButton variant="primary" type="confirm" size="md">
+      <MainButton variant="primary" choice="confirm" size="md">
         메인 버튼
       </MainButton>
       <hr />
-      <MainButton variant="primary" type="confirm" size="md">
+      <MainButton variant="primary" choice="confirm" size="md">
         목록으로 돌아가기&ensp;
         <UTurnRightIcon sx={{ rotate: "90deg" }} />
       </MainButton>
       <hr />
-      <MainButton variant="primary" type="confirm" size="sm42">
+      <MainButton variant="primary" choice="confirm" size="sm42">
         메인 버튼
       </MainButton>
       <hr />
-      <MainButton variant="primary" type="cancel" size="sm48">
+      <MainButton variant="primary" choice="cancel" size="sm48">
         메인 버튼
       </MainButton>
       <hr />
-      <MainButton disabled variant="primary" type="confirm" size="sm48">
+      <MainButton disabled variant="primary" choice="confirm" size="sm48">
         메인 버튼
       </MainButton>
       <hr />
-      <MainButton variant="secondary" type="confirm" size="lg">
+      <MainButton variant="secondary" choice="confirm" size="lg">
         메인 버튼
       </MainButton>
       <hr />
-      <MainButton variant="secondary" type="cancel" size="md">
+      <MainButton variant="secondary" choice="cancel" size="md">
         메인 버튼
       </MainButton>
       <hr />
-      <MainButton variant="secondary" type="confirm" size="sm48">
+      <MainButton variant="secondary" choice="confirm" size="sm48">
         메인 버튼
       </MainButton>
       <hr />

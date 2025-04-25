@@ -9,6 +9,7 @@ import { RHFTextInput } from "@/components/form/RHFTextInput";
 import { RHFPasswordInput } from "@/components/form/RHFPasswordInput";
 import { RHFMultilineInput } from "@/components/form/RHFMultilineInput";
 import { SearchInput } from "@/components/form/SearchInput";
+import { Typography } from "@mui/material";
 
 const schema = z.object({
   name: z
@@ -44,6 +45,11 @@ export default function Page() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <RHFTextInput
+        label={
+          <Typography variant="text2lg" fontWeight={"bold"}>
+            닉네임
+          </Typography>
+        }
         name="name"
         placeholder="닉네임을 입력해주세요"
         control={control}

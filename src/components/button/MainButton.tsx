@@ -5,16 +5,16 @@ import { ButtonProps, useTheme } from "@mui/material";
 type MainButtonProps = {
   variant: "primary" | "secondary";
   size: "lg" | "md" | "sm42" | "sm48";
-  type: "confirm" | "cancel";
+  choice: "confirm" | "cancel";
   icon?: ReactNode;
   iconPosition?: "left" | "right";
   children?: ReactNode;
-} & Omit<ButtonProps, "variant" | "size" | "type">;
+} & Omit<ButtonProps, "variant" | "size">;
 
 export const MainButton = ({
   variant = "primary",
   size,
-  type,
+  choice,
   icon,
   iconPosition,
   children,
@@ -49,7 +49,7 @@ export const MainButton = ({
     },
   };
 
-  const typeStyle = {
+  const choiceStyle = {
     confirm: {
       primary: {
         color: theme.palette.common.white,
@@ -89,8 +89,8 @@ export const MainButton = ({
     <BaseButton
       icon={icon}
       iconPosition={iconPosition}
-      sx={{ ...sizeStyle[size], ...typeStyle[type][variant] }}
       {...props}
+      sx={{ ...sizeStyle[size], ...choiceStyle[choice][variant], ...props.sx }}
     >
       {children}
     </BaseButton>

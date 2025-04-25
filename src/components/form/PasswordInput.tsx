@@ -9,11 +9,11 @@ import {
   InputAdornment,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
-import React from "react";
+import React, { ReactNode } from "react";
 import { BaseInput } from "./BaseInput";
 
 type PasswordInputProps = {
-  label?: string;
+  label?: ReactNode;
   value?: string;
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -34,6 +34,7 @@ export const PasswordInput = ({
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   return (
     <div>
+      {label && label}
       <FormControl fullWidth sx={{ minHeight: "82px" }} variant="outlined">
         <BaseInput
           id="outlined-adornment-password"

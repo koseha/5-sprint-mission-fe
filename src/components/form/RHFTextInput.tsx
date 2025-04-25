@@ -2,10 +2,11 @@
 
 import { Controller, Control, FieldValues, Path } from "react-hook-form";
 import { TextInput } from "./TextInput";
+import { ReactNode } from "react";
 
 type RHFTextInputProps<T extends FieldValues> = {
   name: Path<T>;
-  label?: string;
+  label?: ReactNode;
   placeholder?: string;
   control: Control<T>;
   multiline?: boolean;
@@ -25,6 +26,7 @@ export const RHFTextInput = <T extends FieldValues>({
     control={control}
     render={({ field, fieldState }) => (
       <TextInput
+        label={label}
         value={field.value || ""}
         placeholder={placeholder}
         multiline={multiline}

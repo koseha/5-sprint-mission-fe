@@ -2,10 +2,11 @@
 
 import { Controller, Control, FieldValues, Path } from "react-hook-form";
 import { PasswordInput } from "./PasswordInput";
+import { ReactNode } from "react";
 
 type RHFPasswordInputProps<T extends FieldValues> = {
   name: Path<T>;
-  label?: string;
+  label?: ReactNode;
   placeholder?: string;
   control: Control<T>;
 };
@@ -21,6 +22,7 @@ export const RHFPasswordInput = <T extends FieldValues>({
     control={control}
     render={({ field, fieldState }) => (
       <PasswordInput
+        label={label}
         value={field.value || ""}
         placeholder={placeholder}
         onChange={field.onChange}
